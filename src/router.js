@@ -23,7 +23,7 @@ const routers = [
         path: '/home',
         name: 'home',
         meta: {
-            title: ''
+            requireAuth: true,
         },
         component: (resolve) => require(['./views/index.vue'], resolve),
         children: [
@@ -35,6 +35,9 @@ const routers = [
         path: '/',
         component: Home,
         name: '导航一',
+        meta: {
+            requireAuth: true,
+        },
         children: [
             { path: 'test', component: Test, name: 'Test'},
             { path: 'test2', component: Test2, name: 'Test2'},
