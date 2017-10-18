@@ -78,18 +78,20 @@
                 util.ajax({
                     url:url,
                     method: 'post',
+                    headers: {
+                        "x-auth-uuid": uuid,
+                    },
                     data: {
                         email: email,
                         password: password,
                         captcha: captcha,
-                        "x-auth-uuid": uuid,
                     }
                 }).then((res) => {
                     if (res.data.code == 200) {
                         console.log("登录成功",res.data.data.token);
                         window.localStorage.token = res.data.data.token;
                         window.localStorage.hid = res.data.data.hid;
-                        this.$router.push('/post');
+                        this.$router.push('/index');
                     } else {
                         this.changeCaptcha();
                         this.$Message.error(res.data.message);

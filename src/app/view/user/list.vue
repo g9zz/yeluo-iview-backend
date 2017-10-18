@@ -9,38 +9,6 @@
         <Table stripe border :highlight-row=true  :columns="columns7" :data="data6"></Table>
         <Page @on-change="changePage" :total="totalNum" :current="currentNum" :page-size="pageSize" show-total style="margin-top: 10px"></Page>
 
-
-        <!--<Modal v-model="modal2" >-->
-            <!--<p slot="header" style="color:black;text-align:center">-->
-                <!--<Icon type="information-circled"></Icon>-->
-                <!--<span>删除确认</span>-->
-            <!--</p>-->
-            <!--<div style="text-align:center">-->
-                <!--<Form ref="formValidate" :model="formValidate" :rules="ruleValidate" :label-width="80">-->
-                    <!--<Form-item label="用户名" prop="name">-->
-                        <!--<Input v-model="formValidate.name" placeholder="用户名"></Input>-->
-                    <!--</Form-item>-->
-                    <!--<Form-item label="邮箱" prop="email">-->
-                        <!--<Input v-model="formValidate.email" placeholder="邮箱"></Input>-->
-                    <!--</Form-item>-->
-                    <!--<Form-item label="验证" prop="gender">-->
-                        <!--<Radio-group v-model="formValidate.verified">-->
-                            <!--<Radio label="yes">是</Radio>-->
-                            <!--<Radio label="no">否</Radio>-->
-                        <!--</Radio-group>-->
-                    <!--</Form-item>-->
-                    <!--<Form-item label="状态" prop="gender">-->
-                        <!--<Radio-group v-model="formValidate.status">-->
-                            <!--<Radio label="activated">正常</Radio>-->
-                            <!--<Radio label="closure">封禁</Radio>-->
-                        <!--</Radio-group>-->
-                    <!--</Form-item>-->
-                <!--</Form>-->
-            <!--</div>-->
-            <!--<div slot="footer">-->
-                <!--<Button type="info" size="large" long :loading="modal_loading" @click="submitForm">确认</Button>-->
-            <!--</div>-->
-        <!--</Modal>-->
         <Modal v-model="modal3" >
             <p slot="header" style="color:cornflowerblue;text-align:center">
                 <Icon type="information-circled"></Icon>

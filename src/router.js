@@ -11,6 +11,7 @@ import NodeList from './app/view/node/index.vue'
 import ReplyList from './app/view/reply/index.vue'
 import RoleList from './app/view/role/index.vue'
 import PermissionList from './app/view/permission/index.vue'
+import HomeIndex from './app/view/index.vue'
 
 Vue.use(VueRouter)
 
@@ -18,6 +19,16 @@ const routers = [
     {
         path: '/login',
         component: resolve => require(['./app/login/login.vue'], resolve),
+    },{
+        path: '/',
+        component: Home,
+        name: '首页',
+        meta: {
+            requireAuth: true,
+        },
+        children: [
+            { path: '/index', component: HomeIndex, name: 'home_index'},
+        ]
     },
     {
         path: '/home',
