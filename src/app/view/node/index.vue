@@ -278,7 +278,7 @@
                     })
             },
             nodeList () {
-                util.ajax.get('/console/node',{
+                util.ajax.get('/node',{
                     headers: {
                         'x-auth-token': this.token,
                     },
